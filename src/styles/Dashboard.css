@@ -1,0 +1,210 @@
+/* General Styles */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #EFE6DC;
+}
+
+.taskly-logo {
+  width: 150px;          /* Adjust the width as needed */
+  height: auto;          /* Maintain the aspect ratio */
+  margin: 0px 0;        /* Space around the logo */
+  display: block;        /* Ensure it behaves as a block-level element */
+  object-fit: contain;   /* Prevent the image from being distorted */
+}
+
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  background: #EFE6DC;
+  min-height: 100vh;
+}
+
+/* Top Bar */
+.topbar {
+  width: 100%;
+  background: white;
+  padding: 10px 5%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.1);
+  flex-wrap: wrap;
+}
+
+.topbar .title {
+  font-size: 2vw;
+  font-weight: bold;
+  color: #7B3E02;
+}
+
+.topbar input {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 20vw;
+  min-width: 150px;
+}
+
+.topbar .date {
+  color: #5a3826;
+  font-size: 1.5vw;
+}
+
+/* Content Layout */
+.content {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 10px;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 250px;
+  background: #7B3E02;
+  color: white;
+  min-height: 83.5vh;
+  padding: 20px;
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar ul li img {
+  width: 20px;
+  margin-right: 10px;
+}
+
+.sidebar ul li.active {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+}
+
+/* Main Content */
+.main-content {
+  flex: 1;
+  padding: 5%;
+  text-align: center;
+}
+
+/* Welcome Section */
+.welcome-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px; /* Moves 'Welcome' down */
+}
+
+.welcome-img {
+  width: 60vw;
+  max-width: 1000px;
+  display: block;
+  position: relative;
+}
+
+/* Thinking Image */
+.thinking-img {
+  width: 30vw;
+  max-width: 500px;
+  position: absolute;
+  right: 5%;
+  top: 40vh; /* Adjusted to move slightly lower */
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .thinking-img {
+    width: 25vw;
+    right: 2%;
+    top: 45vh;
+  }
+
+  .welcome-img {
+    width: 70vw;
+    margin-top: 60px; /* Pushes down on smaller screens */
+  }
+
+  .topbar .title {
+    font-size: 3vw;
+  }
+
+  .topbar input {
+    width: 25vw;
+  }
+}
+
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .main-content {
+    text-align: center;
+    padding: 10%;
+  }
+
+  .thinking-img {
+    position: static;
+    width: 40vw;
+    max-width: 300px;
+    margin: 20px auto;
+  }
+
+  .welcome-img {
+    width: 80vw;
+    margin-top: 80px;
+  }
+
+  .topbar {
+    flex-direction: column;
+    padding: 15px;
+    text-align: center;
+  }
+
+  .topbar .title {
+    font-size: 4vw;
+  }
+
+  .topbar input {
+    width: 40vw;
+  }
+
+  .topbar .date {
+    font-size: 2vw;
+  }
+}
+
+@media (max-width: 480px) {
+  .topbar .title {
+    font-size: 5vw;
+  }
+
+  .topbar input {
+    width: 60vw;
+  }
+
+  .topbar .date {
+    font-size: 3vw;
+  }
+
+  .thinking-img {
+    width: 50vw;
+    max-width: 250px;
+  }
+
+  .welcome-img {
+    width: 90vw;
+    margin-top: 100px; /* Pushes even lower on small screens */
+  }
+}

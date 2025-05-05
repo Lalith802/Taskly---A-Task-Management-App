@@ -1,0 +1,109 @@
+/* General layout for the calendar page */
+.dashboard-container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  background-color: #F8F8F8;
+  padding: 10px;
+}
+
+.taskly-logo {
+  width: 120px;
+}
+
+.content {
+  display: flex;
+  flex: 1;
+}
+
+.calendar-container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.calendar-section {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 1300px;
+  height: 750px; /* Limit overall height */
+  overflow-y: auto;
+}
+
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.calendar-icon {
+  width: 25px;
+  height: auto;
+  margin-right: 10px;
+}
+
+h1 {
+  font-size: 24px;
+  color: #333;
+}
+
+.add-event {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.add-event:hover {
+  background-color: #45a049;
+}
+
+.event-inputs {
+  margin-top: 20px;
+}
+
+input,
+textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+textarea {
+  height: 100px;
+}
+
+.error-message {
+  color: red;
+  font-size: 14px;
+}
+
+/* Calendar styling */
+.react-calendar,
+.rbc-calendar {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #fff;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  font-size: 14px;
+  height: 450px; /* Reduce the internal calendar height */
+}

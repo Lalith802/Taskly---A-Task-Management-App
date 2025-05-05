@@ -1,0 +1,87 @@
+.sidebar {
+  width: 260px;
+  background: #7B3E02;
+  color: white;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0px;
+  height: 20.5vh;
+  margin-right: 0px;
+  margin-bottom: 320px; 
+}
+
+.sidebar .logo {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+.sidebar .logo img {
+  width: 80px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+}
+
+/* Sidebar menu */
+.sidebar .menu {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  display: flex;  /* Ensures gap works */
+  flex-direction: column; /* Ensures vertical stacking */
+  gap: 20px; /* Adds spacing between items */
+}
+
+.sidebar .menu li {
+  display: flex;
+  align-items: center;
+  gap: 23px;
+  padding: 12px 15px;
+  cursor: pointer;
+  transition: background .5s ease-in-out;
+  font-size: 20px;
+  font-weight: bold;
+  color: white;
+}
+
+.sidebar .menu li img {
+  width: 20px;
+  height: 20px;
+}
+
+/* Active and hover effect */
+.sidebar .menu li:hover,
+.sidebar .menu .active {
+  background: rgb(171, 136, 136);
+  color: #5a3826;
+  border-radius: 8px;
+}
+
+/* Logout button */
+.logout {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: auto;
+  padding: 12px 15px;
+  width: 90%;
+  background: transparent;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.logout img {
+  width: 20px;
+  height: 20px;
+}
+
+.logout:hover {
+  background: rgb(171, 136, 136);
+  color: #5a3826;
+  border-radius: 8px;
+}
